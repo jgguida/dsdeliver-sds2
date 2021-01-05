@@ -59,11 +59,11 @@ public class Product implements Serializable{
 		this.price = price;
 	}
 
-	public String getDescriptiom() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setDescriptiom(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
