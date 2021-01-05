@@ -2,14 +2,24 @@ package com.devsuperior.dsdeliver.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_product")
 public class Product implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private Double price;
-	private String descriptiom;
+	private String description;
 	private String imageUri;
 	
 	public Product () {
@@ -21,7 +31,7 @@ public class Product implements Serializable{
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.descriptiom = descriptiom;
+		this.description = description;
 		this.imageUri = imageUri;
 	}
 
@@ -50,11 +60,11 @@ public class Product implements Serializable{
 	}
 
 	public String getDescriptiom() {
-		return descriptiom;
+		return description;
 	}
 
-	public void setDescriptiom(String descriptiom) {
-		this.descriptiom = descriptiom;
+	public void setDescriptiom(String description) {
+		this.description = description;
 	}
 
 	public String getImageUri() {
